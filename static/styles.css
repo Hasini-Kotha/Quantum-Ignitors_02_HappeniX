@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+    animation: slideDown 1s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff4500 !important;
+    text-shadow: 3px 3px 8px rgba(255, 69, 0, 0.7);
+    font-family: 'Dancing Script', cursive;
+}
+.navbar a {
+    color: #ff1493 !important;
+    transition: 0.3s;
+    position: relative;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar a:hover {
+    color: #ff4500 !important;
+    transform: scale(1.1);
+    text-shadow: 2px 2px 5px rgba(255, 69, 0, 0.7);
+}
+
+/* Image Slider */
+.slider {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+}
+.slider img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+.slider img.active {
+    opacity: 1;
+}
+
+/* Skeleton Screen */
+.skeleton {
+    background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+    background-size: 400% 100%;
+    animation: loading 1.5s infinite;
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+}
+@keyframes loading {
+    from { background-position: 100% 0; }
+    to { background-position: -100% 0; }
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    color: #ff4500;
+    text-shadow: 3px 3px 10px rgba(255, 69, 0, 0.7);
+    animation: fadeIn 2s ease-in;
+    position: relative;
+}
+
+/* Animated Icons */
+.animated-icon {
+    font-size: 2rem;
+    margin: 10px;
+    color: #ff4500;
+    transition: transform 0.3s;
+}
+.animated-icon:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+/* Accent Animation */
+.accent {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    background: linear-gradient(to right, #ff4500, #ff1493);
+    color: white;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Button Styling */
+.btn-primary {
+    background: linear-gradient(to right, #ff4500, #ff1493);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(255, 69, 0, 0.5);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+.btn-primary:hover {
+    background: #ff1493;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(255, 20, 147, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
